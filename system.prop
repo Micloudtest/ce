@@ -1,6 +1,5 @@
 ro.vendor.mediatek.platform=MT6768
 ro.hardware=mt6768
-ro.sf.lcd_density=440
 ro.hardware.kmsetkey=beanpod
 ro.hardware.gatekeeper=beanpod
 ro.mtk_tee_gp_support=1
