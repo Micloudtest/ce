@@ -9,9 +9,6 @@ DEVICE_PATH := device/xiaomi/lancelot
 # For building with minimal manifest
 ALLOW_MISSING_DEPENDENCIES := true
 
-# APEX
-DEXPREOPT_GENERATE_APEX_IMAGE := true
-
 # Architecture
 TARGET_ARCH := arm64
 TARGET_ARCH_VARIANT := armv8-2a
@@ -28,14 +25,14 @@ TARGET_2ND_CPU_VARIANT := generic
 TARGET_2ND_CPU_VARIANT_RUNTIME := cortex-a55
 
 # Bootloader
-TARGET_BOOTLOADER_BOARD_NAME := lancelot
+TARGET_BOOTLOADER_BOARD_NAME := mt6768
 TARGET_NO_BOOTLOADER := true
 
 # Platform
 TARGET_BOARD_PLATFORM := mt6768
 
 # Assert
-TARGET_OTA_ASSERT_DEVICE := lancelot,galahad
+TARGET_OTA_ASSERT_DEVICE := lancelot
 
 # Kernel
 BOARD_BOOTIMG_HEADER_VERSION := 2
