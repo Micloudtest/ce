@@ -1,4 +1,4 @@
-import /init.recovery.microtrust.rc
+import /init.recovery.teei_daemon.rc
 
 on fs
     install_keyring
