@@ -104,12 +104,6 @@ TARGET_USES_UEFI := true
 # System as Root
 BOARD_SUPPRESS_SECURE_ERASE := true
 
-# Use LZ4 Ramdisk compression instead of GZIP
-BOARD_RAMDISK_USE_LZ4 := true
-
-# VNDK Treble
-BOARD_VNDK_VERSION := current
-
 # Display
 TW_BRIGHTNESS_PATH := "/sys/class/leds/lcd-backlight/brightness"
 TW_MAX_BRIGHTNESS := 2047
