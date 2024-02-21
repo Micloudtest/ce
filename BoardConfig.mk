@@ -138,11 +138,6 @@ TARGET_SYSTEM_PROP += $(DEVICE_PATH)/system.prop
 # System as root
 BOARD_SUPPRESS_SECURE_ERASE := true
 
-# Selinux
-BOARD_SEPOLICY_VERS := 29.0.3
-SEPOLICY_IGNORE_NEVERALLOWS := true
-SELINUX_IGNORE_NEVERALLOWS := true
-
 ifneq ($(OF_HIDE_NOTCH),1)
   # Configure Status bar icons for regular TWRP builds only
     TW_CUSTOM_CPU_POS := "300"
