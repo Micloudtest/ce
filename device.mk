@@ -21,6 +21,10 @@ LOCAL_PATH := device/xiaomi/lancelot
 # Dynamic Partitions
 PRODUCT_USE_DYNAMIC_PARTITIONS := true
 
+# Soong namespaces
+PRODUCT_SOONG_NAMESPACES += \
+    $(LOCAL_PATH)
+
 # API
 PRODUCT_SHIPPING_API_LEVEL := 29
 
