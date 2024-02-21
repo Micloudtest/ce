@@ -146,11 +146,12 @@ BOARD_SEPOLICY_VERS := 29.0.3
 SEPOLICY_IGNORE_NEVERALLOWS := true
 SELINUX_IGNORE_NEVERALLOWS := true
 
-# StatusBar
-TW_STATUS_ICONS_ALIGN := center
-TW_CUSTOM_CPU_POS := "300"
-TW_CUSTOM_CLOCK_POS := "70"
-TW_CUSTOM_BATTERY_POS := "790"
+ifneq ($(OF_HIDE_NOTCH),1)
+  # Configure Status bar icons for regular TWRP builds only
+    TW_CUSTOM_CPU_POS := "300"
+    TW_CUSTOM_CLOCK_POS := "60"
+    TW_CUSTOM_BATTERY_POS := "790"
+endif
 
 # TWRP Configuration
 TW_DEVICE_VERSION := Norikhsan90
