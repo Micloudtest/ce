@@ -41,7 +41,7 @@ export OF_MAINTAINER="Tapin Recovery Instraller"
 export FOX_VERSION=R12.1_0
 export FOX_BUILD_TYPE="Unofficial"
 export TARGET_DEVICE_ALT="lancelot"
-export OF_TARGET_DEVICES="lancelot,shiva"
+export FOX_TARGET_DEVICES="lancelot,shiva"
 export OF_DEFAULT_TIMEZONE="WIB-7"
 export LC_ALL="C"
 
