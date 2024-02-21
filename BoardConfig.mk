@@ -92,8 +92,8 @@ TARGET_USES_UEFI := true
 # Metadata
 BOARD_USES_METADATA_PARTITION := true
 
-# Use LZ4 Ramdisk compression instead of GZIP
-BOARD_RAMDISK_USE_LZ4 := true
+# System as root
+BOARD_SUPPRESS_SECURE_ERASE := true
 
 # AVB
 BOARD_AVB_ENABLE := true
@@ -107,11 +107,6 @@ TARGET_SCREEN_DENSITY := 440
 TW_BRIGHTNESS_PATH := "/sys/class/leds/lcd-backlight/brightness"
 TW_MAX_BRIGHTNESS := 2047
 TW_DEFAULT_BRIGHTNESS := 500
-
-#MIUI 12.xx A11 DECRYPTION
-BOARD_AVB_RECOVERY_ADD_HASH_FOOTER_ARGS += \
-    --prop com.android.build.boot.os_version:$(PLATFORM_VERSION) \
-    --prop com.android.build.boot.security_patch:$(PLATFORM_SECURITY_PATCH)
 
 # Crypto
 TW_USE_FSCRYPT_POLICY := 1
@@ -134,9 +129,6 @@ TARGET_RECOVERY_FSTAB := $(DEVICE_PATH)/recovery/root/system/etc/recovery.fstab
 
 # Properties
 TARGET_SYSTEM_PROP += $(DEVICE_PATH)/system.prop
-
-# System as root
-BOARD_SUPPRESS_SECURE_ERASE := true
 
 ifneq ($(OF_HIDE_NOTCH),1)
   # Configure Status bar icons for regular TWRP builds only
