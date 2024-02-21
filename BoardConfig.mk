@@ -9,6 +9,10 @@ DEVICE_PATH := device/xiaomi/lancelot
 # For building with minimal manifest
 ALLOW_MISSING_DEPENDENCIES := true
 
+# Build Hack
+BUILD_BROKEN_DUP_RULES := true
+BUILD_BROKEN_MISSING_REQUIRED_MODULES := true
+
 # Architecture
 TARGET_ARCH := arm64
 TARGET_ARCH_VARIANT := armv8-2a
@@ -45,6 +49,7 @@ BOARD_KERNEL_TAGS_OFFSET := 0x0bc08000
 
 TARGET_KERNEL_ARCH := arm64
 TARGET_KERNEL_HEADER_ARCH := arm64
+BUILD_WITHOUT_VENDOR := true
 
 # Image
 TARGET_PREBUILT_KERNEL := $(DEVICE_PATH)/prebuilt/Image.gz
@@ -125,7 +130,7 @@ TW_CUSTOM_CLOCK_POS := "70"
 TW_CUSTOM_BATTERY_POS := "790"
 
 # TWRP Configuration
-#TW_DEVICE_VERSION := Norikhsan90
+TW_DEVICE_VERSION := Norikhsan90
 TW_THEME := portrait_hdpi
 TW_INCLUDE_NTFS_3G    := true
 TW_INCLUDE_FUSE_EXFAT := true
