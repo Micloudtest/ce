@@ -100,7 +100,7 @@ if [ "$1" = "$FDEVICE" -o "$FOX_BUILD_DEVICE" = "$FDEVICE" ]; then
 	export OF_ALLOW_DISABLE_NAVBAR="0"
 	export OF_CLOCK_POS=1 # left and right clock positions available
 	export OF_USE_GREEN_LED=0
- 	export OF_FLASHLIGHT_ENABLE=0
+ 	export OF_FLASHLIGHT_ENABLE=1
   export OF_FL_PATH1="/tmp/flashlight" # See /init.recovery.mt6877.rc for more information
 
   # Removes the loop block errors after flashing ZIPs (Workaround) 
