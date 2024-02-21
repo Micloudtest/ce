@@ -87,3 +87,12 @@ on property:recovery.perf.mode=0
     write /sys/devices/system/cpu/cpu5/online 0
     write /sys/devices/system/cpu/cpu6/online 1
     write /sys/devices/system/cpu/cpu7/online 0
+
+
+# Fix flashlight on orangefox
+on property:ro.orangefox.boot=1
+    mkdir /tmp/flashlight
+    write /tmp/flashlight/max_brightness "258"
+    symlink /sys/devices/platform/flashlights_led191/leds/torch-light0/brightness /tmp/flashlight/brightness
+
+
