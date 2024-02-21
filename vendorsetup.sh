@@ -34,8 +34,7 @@ if [ -z "$1" -a -z "$FOX_BUILD_DEVICE" ]; then
 fi
 
 if [ "$1" = "$FDEVICE" -o "$FOX_BUILD_DEVICE" = "$FDEVICE" ]; then
-
-		
+	
 # Version / Maintainer infos
 export OF_MAINTAINER="Tapin Recovery Instraller"
 export FOX_VERSION=R12.1_0
