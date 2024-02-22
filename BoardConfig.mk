@@ -114,6 +114,12 @@ TW_BRIGHTNESS_PATH := "/sys/devices/platform/leds-mt65xx/leds/lcd-backlight/brig
 TW_MAX_BRIGHTNESS := 2047
 TW_DEFAULT_BRIGHTNESS := 500
 
+# UEFI
+TARGET_USES_UEFI := true
+
+# VNDK Treble
+BOARD_VNDK_VERSION := current
+
 # Crypto
 TW_USE_FSCRYPT_POLICY := 1
 TW_INCLUDE_CRYPTO := true
