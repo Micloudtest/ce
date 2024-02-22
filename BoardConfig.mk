@@ -86,6 +86,10 @@ TARGET_USES_MKE2FS := true
 # Metadata
 BOARD_USES_METADATA_PARTITION := true
 
+# Android Verified Boot
+BOARD_AVB_ENABLE := false
+BOARD_BUILD_DISABLED_VBMETAIMAGE := true
+
 # Display
 TARGET_SCREEN_DENSITY := 440
 TW_MAX_BRIGHTNESS := 2047
@@ -132,7 +136,6 @@ TW_INCLUDE_REPACKTOOLS := true
 TW_INCLUDE_RESETPROP := true
 
 # TWRP Configuration
-
 TW_THEME := portrait_hdpi
 TW_INCLUDE_NTFS_3G    := true
 TW_INCLUDE_FUSE_EXFAT := true
