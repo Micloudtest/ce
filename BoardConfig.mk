@@ -143,6 +143,8 @@ ifneq ($(OF_HIDE_NOTCH),1)
     TW_CUSTOM_CPU_POS := "300
     TW_CUSTOM_CLOCK_POS := "70"
     TW_CUSTOM_BATTERY_POS := "790"
+    #TW_Y_OFFSET := 80
+    #TW_H_OFFSET := -80
 endif
 
 # Tool
