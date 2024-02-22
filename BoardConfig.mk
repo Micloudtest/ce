@@ -127,7 +127,7 @@ TW_INCLUDE_REPACKTOOLS := true
 TW_INCLUDE_RESETPROP := true
 
 # TWRP Configuration
-TW_DEVICE_VERSION := Norikhsan90
+TW_DEVICE_VERSION := Lancelot_Tapin™
 TW_THEME := portrait_hdpi
 TW_INCLUDE_NTFS_3G    := true
 TW_INCLUDE_FUSE_EXFAT := true
