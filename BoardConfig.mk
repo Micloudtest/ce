@@ -167,6 +167,7 @@ TW_INCLUDE_FUSE_NTFS  := true
 TW_INPUT_BLACKLIST := "hbtp_vm"
 TW_SCREEN_BLANK_ON_BOOT := true
 TW_EXCLUDE_APEX := true
+TW_HAS_MTP := true
 RECOVERY_SDCARD_ON_DATA := true
 
 # Removes the loop block errors after flashing ZIPs (Workaround) 
