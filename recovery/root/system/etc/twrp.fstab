@@ -36,5 +36,5 @@
 /storage            auto      /data/media/0                                      flags=display="Internal Storage";usermrf;backup=1;fsflags="bind";removable;
 
 ## External Storage
-/external_sd        auto     /dev/block/mmcblk1p1  /dev/block/mmcblk1            flags=display="Micro SD Card";storage;wipeingui;removable;fsflags="utf8"
+/external_sd        auto     /dev/block/mmcblk1p1  /dev/block/mmcblk1            flags=display="Micro SDCard";storage;wipeingui;removable;fsflags="utf8"
 /usb-otg            auto     /dev/block/sda1  /dev/block/sda                     flags=display="USB OTG";storage;wipeingui;removable;fsflags="utf8"
