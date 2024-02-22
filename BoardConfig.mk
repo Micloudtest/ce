@@ -87,6 +87,13 @@ TARGET_USES_MKE2FS := true
 
 # Metadata
 BOARD_USES_METADATA_PARTITION := true
+BOARD_ROOT_EXTRA_FOLDERS += metadata
+
+# System as Root
+BOARD_SUPPRESS_SECURE_ERASE := true
+
+# Use LZ4 Ramdisk compression instead of GZIP
+BOARD_RAMDISK_USE_LZ4 := true
 
 # AVB
 BOARD_AVB_ENABLE := true
