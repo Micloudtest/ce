@@ -1,7 +1,8 @@
 ro.secure=0
-ro.hardware.kmsetkey=beanpod
-ro.hardware.gatekeeper=beanpod
 ro.mtk_tee_gp_support=1
 ro.mtk_microtrust_tee_support=1
-ro.crypto.volume.filenames_mode=aes-256-cts
 fbe.metadata.wrappedkey=true
+ro.crypto.volume.filenames_mode=aes-256-cts
+ro.hardware.kmsetkey=beanpod
+ro.hardware.gatekeeper=beanpod
+ro.postinstall.fstab.prefix=/system
