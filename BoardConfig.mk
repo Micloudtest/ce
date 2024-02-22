@@ -149,10 +149,6 @@ ifneq ($(OF_HIDE_NOTCH),1)
     TW_CUSTOM_CLOCK_POS := "60"
     TW_Y_OFFSET := 80
     TW_H_OFFSET := -80
-
-  # Removes the loop block errors after flashing ZIPs (Workaround) 
-    TW_IGNORE_LOGICAL_MOUNT_ERRORS := true
-    TW_LOOP_DEVICE_ERRORS_TO_LOG := true
 endif
 
 # Tool
@@ -168,6 +164,10 @@ TW_INPUT_BLACKLIST := "hbtp_vm"
 TW_SCREEN_BLANK_ON_BOOT := true
 TW_EXCLUDE_APEX := true
 RECOVERY_SDCARD_ON_DATA := true
+
+# Removes the loop block errors after flashing ZIPs (Workaround) 
+TW_IGNORE_LOGICAL_MOUNT_ERRORS := true
+TW_LOOP_DEVICE_ERRORS_TO_LOG := true
 
 # TW Screenshot
 TW_INCLUDE_FB2PNG := true
