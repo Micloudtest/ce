@@ -137,7 +137,7 @@ TARGET_SYSTEM_PROP += $(DEVICE_PATH)/system.prop
 
 ifneq ($(OF_HIDE_NOTCH),1)
   # Configure Status bar icons for regular TWRP builds only
-    TW_DEVICE_VERSION := TAPIN™
+    TW_DEVICE_VERSION := Lancelot-Tapin™
     TW_STATUS_ICONS_ALIGN := center
     TW_CUSTOM_CPU_POS := "290
     TW_CUSTOM_CLOCK_POS := "60"
