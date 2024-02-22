@@ -96,9 +96,6 @@ BOARD_BUILD_SYSTEM_ROOT_IMAGE := false
 BOARD_USES_METADATA_PARTITION := true
 BOARD_ROOT_EXTRA_FOLDERS += metadata
 
-# System as Root
-BOARD_SUPPRESS_SECURE_ERASE := true
-
 # Display
 TARGET_SCREEN_DENSITY := 440
 TW_BRIGHTNESS_PATH := "/sys/devices/platform/leds-mt65xx/leds/lcd-backlight/brightness"
