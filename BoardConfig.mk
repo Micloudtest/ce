@@ -94,21 +94,20 @@ TARGET_USERIMAGES_USE_EXT4 := true
 TARGET_USERIMAGES_USE_F2FS := true
 TARGET_USES_MKE2FS := true
 
+# UEFI
+TARGET_USES_UEFI := true
+
 # System as root
 BOARD_SUPPRESS_SECURE_ERASE := true
 
 # Metadata
 BOARD_USES_METADATA_PARTITION := true
-BOARD_ROOT_EXTRA_FOLDERS += metadata
 
 # Display
 TARGET_SCREEN_DENSITY := 440
 TW_BRIGHTNESS_PATH := "/sys/devices/platform/leds-mt65xx/leds/lcd-backlight/brightness"
 TW_MAX_BRIGHTNESS := 2047
 TW_DEFAULT_BRIGHTNESS := 500
-
-# UEFI
-TARGET_USES_UEFI := true
 
 # Crypto
 TW_USE_FSCRYPT_POLICY := 1
