@@ -18,6 +18,9 @@
 
 LOCAL_PATH := device/xiaomi/lancelot
 
+# Configure emulated_storage.mk
+$(call inherit-product, $(SRC_TARGET_DIR)/product/emulated_storage.mk)
+
 # Dynamic Partitions
 PRODUCT_USE_DYNAMIC_PARTITIONS := true
 
