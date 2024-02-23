@@ -18,9 +18,6 @@
 
 LOCAL_PATH := device/xiaomi/lancelot
 
-# Dynamic Partitions
-PRODUCT_USE_DYNAMIC_PARTITIONS := true
-
 # VNDK
 PRODUCT_TARGET_VNDK_VERSION := 31
 
