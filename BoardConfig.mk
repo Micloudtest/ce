@@ -141,7 +141,8 @@ TW_INCLUDE_FUSE_EXFAT := true
 TW_INCLUDE_FUSE_NTFS  := true
 TW_INPUT_BLACKLIST := "hbtp_vm"
 TW_SCREEN_BLANK_ON_BOOT := true
-TW_HAS_MTP := true
+TW_INTERNAL_STORAGE_PATH := "/data/media"
+TW_INTERNAL_STORAGE_MOUNT_POINT := "data"
 RECOVERY_SDCARD_ON_DATA := true
 
 # Removes the loop block errors after flashing ZIPs (Workaround) 
@@ -153,6 +154,7 @@ TW_INCLUDE_FB2PNG := true
 
 # USB Configuration
 TW_EXCLUDE_DEFAULT_USB_INIT := true
+TW_HAS_MTP := true
 
 # Log
 TWRP_INCLUDE_LOGCAT := true
