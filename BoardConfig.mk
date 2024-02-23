@@ -9,6 +9,9 @@ DEVICE_PATH := device/xiaomi/lancelot
 # For building with minimal manifest
 ALLOW_MISSING_DEPENDENCIES := true
 
+# APEX
+DEXPREOPT_GENERATE_APEX_IMAGE := true
+
 # Build Hack
 BUILD_BROKEN_DUP_RULES := true
 BUILD_BROKEN_MISSING_REQUIRED_MODULES := true
