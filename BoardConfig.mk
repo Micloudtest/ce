@@ -6,9 +6,6 @@
 
 DEVICE_PATH := device/xiaomi/lancelot
 
-# APEX
-DEXPREOPT_GENERATE_APEX_IMAGE := true
-
 # For building with minimal manifest
 ALLOW_MISSING_DEPENDENCIES := true
 
@@ -151,7 +148,6 @@ TW_INCLUDE_FUSE_EXFAT := true
 TW_INCLUDE_FUSE_NTFS  := true
 TW_INPUT_BLACKLIST := "hbtp_vm"
 TW_SCREEN_BLANK_ON_BOOT := true
-TW_EXCLUDE_APEX := true
 TW_HAS_MTP := true
 RECOVERY_SDCARD_ON_DATA := true
 
@@ -164,7 +160,6 @@ TW_INCLUDE_FB2PNG := true
 
 # USB Configuration
 TW_EXCLUDE_DEFAULT_USB_INIT := true
-TARGET_USE_CUSTOM_LUN_FILE_PATH := /config/usb_gadget/g1/functions/mass_storage.usb0/lun.%d/file
 
 # Log
 TWRP_INCLUDE_LOGCAT := true
