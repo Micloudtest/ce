@@ -153,7 +153,6 @@ TW_INCLUDE_FB2PNG := true
 
 # USB Configuration
 TW_EXCLUDE_DEFAULT_USB_INIT := true
-TW_HAS_MTP := true
 
 # Log
 TWRP_INCLUDE_LOGCAT := true
