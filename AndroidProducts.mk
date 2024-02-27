@@ -17,9 +17,9 @@
 #
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/omni_lancelot.mk
+    $(LOCAL_DIR)/twrp_lancelot.mk
 
 
 COMMON_LUNCH_CHOICES := \
-	omni_lancelot-eng
+	twrp_lancelot-eng
 
