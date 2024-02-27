@@ -19,3 +19,7 @@
 PRODUCT_MAKEFILES := \
     $(LOCAL_DIR)/omni_lancelot.mk
 
+
+COMMON_LUNCH_CHOICES := \
+	omni_lancelot-eng
+
