@@ -153,3 +153,17 @@ TW_EXCLUDE_DEFAULT_USB_INIT := true
 # Log
 TWRP_INCLUDE_LOGCAT := true
 TARGET_USES_LOGD := true
+
+#PBRP Flags
+PB_DISABLE_DEFAULT_TREBLE_COMP := true
+PB_TORCH_PATH := "/sys/devices/platform/flashlights_mt6360/leds/torch-light0/brightness"
+
+# Disable AVB2.0
+PB_DISABLE_DEFAULT_PATCH_AVB2 := true
+
+# Maintener
+pb_maintainer = Tapin_Recovery_Instraller
+	
+# Removes the loop block errors after flashing ZIPs (Workaround) 
+TW_IGNORE_LOGICAL_MOUNT_ERRORS = true
+TW_LOOP_DEVICE_ERRORS_TO_LOG = true
