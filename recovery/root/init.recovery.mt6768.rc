@@ -57,10 +57,3 @@ on property:twrp.decrypt.done=true && property:twrp.all.users.decrypted=true
     stop keymaster-4-0
     stop gatekeeper-1-0
 
-# Fix flashlight on orangefox
-on property:ro.orangefox.boot=1
-    mkdir /tmp/flashlight
-    write /tmp/flashlight/max_brightness "258"
-    symlink /sys/devices/platform/flashlights_led191/leds/torch-light0/brightness /tmp/flashlight/brightness
-
-
