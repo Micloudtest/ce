@@ -1,5 +1,12 @@
 import /init.microtrust.rc
 
+on init
+    export LD_LIBRARY_PATH /system/lib64:/vendor/lib64:/vendor/lib64/hw:/system/lib64/hw
+
+on fs
+    install_keyring
+    setprop crypto.ready 1
+
 # We need vold early for metadata encryption
 on early-fs
     start vold
@@ -8,13 +15,6 @@ on late-fs
     # Mount RW partitions which need run fsck
     mount_all /first_stage_ramdisk/fstab.mt6768 --late
     mount_all /first_stage_ramdisk/fstab.emmc --late
-
-on init
-    export LD_LIBRARY_PATH /system/lib64:/vendor/lib64:/vendor/lib64/hw:/system/lib64/hw
-
-on fs
-    install_keyring
-    setprop crypto.ready 1
 
 service keystore_auth /system/bin/keystore_auth
     oneshot
