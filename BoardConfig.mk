@@ -160,7 +160,3 @@ PB_DISABLE_DEFAULT_PATCH_AVB2 := true
 
 # Maintener
 pb_maintainer = Tapin_Recovery_Instraller
-	
-# Removes the loop block errors after flashing ZIPs (Workaround) 
-TW_IGNORE_LOGICAL_MOUNT_ERRORS = true
-TW_LOOP_DEVICE_ERRORS_TO_LOG = true
