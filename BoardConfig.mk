@@ -155,7 +155,7 @@ TARGET_USES_LOGD := true
 
 #PBRP Flags
 PB_DISABLE_DEFAULT_TREBLE_COMP := true
-PB_TORCH_PATH := "/sys/devices/platform/flashlights_mt6360/leds/torch-light0/brightness"
+PB_TORCH_PATH := "/sys/devices/platform/flashlights_led191/leds/torch-light0/brightness"
 
 # Disable AVB2.0
 PB_DISABLE_DEFAULT_PATCH_AVB2 := true
