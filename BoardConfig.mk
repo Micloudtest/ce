@@ -93,8 +93,8 @@ TARGET_USES_UEFI := true
 # System as root
 BOARD_SUPPRESS_SECURE_ERASE := true
 
-# Metadata
-BOARD_USES_METADATA_PARTITION := true
+# Use LZ4 Ramdisk compression instead of GZIP
+BOARD_RAMDISK_USE_LZ4 := true
 
 # Display
 TARGET_SCREEN_DENSITY := 440
@@ -112,7 +112,6 @@ BOARD_AVB_RECOVERY_ROLLBACK_INDEX_LOCATION := 1
 # Crypto
 TW_INCLUDE_CRYPTO := true
 TW_INCLUDE_CRYPTO_FBE := true
-TW_INCLUDE_FBE_METADATA_DECRYPT := true
 TW_PREPARE_DATA_MEDIA_EARLY := true
 
 # Security patch level
