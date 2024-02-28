@@ -93,6 +93,9 @@ TARGET_USES_UEFI := true
 # System as root
 BOARD_SUPPRESS_SECURE_ERASE := true
 
+# Metadata
+BOARD_USES_METADATA_PARTITION := true
+
 # Use LZ4 Ramdisk compression instead of GZIP
 BOARD_RAMDISK_USE_LZ4 := true
 
