@@ -129,6 +129,8 @@ ifneq ($(OF_HIDE_NOTCH),1)
     TW_STATUS_ICONS_ALIGN := center
     TW_CUSTOM_CPU_POS := "300"
     TW_CUSTOM_CLOCK_POS := "60"
+    TW_Y_OFFSET := 80
+    TW_H_OFFSET := -80
 endif
 
 # Recovery
@@ -151,8 +153,6 @@ TW_THEME := portrait_hdpi
 TW_INCLUDE_NTFS_3G    := true
 TW_INCLUDE_FUSE_EXFAT := true
 TW_INCLUDE_FUSE_NTFS  := true
-#TW_Y_OFFSET := 80
-#TW_H_OFFSET := -80
 TW_INPUT_BLACKLIST := "hbtp_vm"
 TW_SCREEN_BLANK_ON_BOOT := true
 RECOVERY_SDCARD_ON_DATA := true
