@@ -85,6 +85,7 @@ TARGET_USES_MKE2FS := true
 TARGET_USES_UEFI := true
 
 # System as root
+BOARD_BUILD_SYSTEM_ROOT_IMAGE := false
 BOARD_SUPPRESS_SECURE_ERASE := true
 
 # Metadata
