@@ -132,6 +132,14 @@ VENDOR_SECURITY_PATCH := $(PLATFORM_SECURITY_PATCH)
 PLATFORM_VERSION_LAST_STABLE := $(PLATFORM_VERSION)
 BOOT_SECURITY_PATCH := $(PLATFORM_SECURITY_PATCH)
 
+ifneq ($(OF_HIDE_NOTCH),1)
+  # Configure Status bar icons for regular TWRP builds only
+    TW_DEVICE_VERSION := Lancelot-Tapin™
+    TW_STATUS_ICONS_ALIGN := center
+    TW_CUSTOM_CPU_POS := "300"
+    TW_CUSTOM_CLOCK_POS := "60"
+endif
+
 # Recovery
 TARGET_RECOVERY_PIXEL_FORMAT := "RGBX_8888"
 TARGET_RECOVERY_FSTAB := $(DEVICE_PATH)/recovery/root/system/etc/recovery.fstab
