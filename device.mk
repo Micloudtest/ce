@@ -18,17 +18,14 @@
 
 LOCAL_PATH := device/xiaomi/lancelot
 
-# Enable project quotas and casefolding for emulated storage without sdcardfs
-$(call inherit-product, $(SRC_TARGET_DIR)/product/emulated_storage.mk)
-
 # Dynamic Partitions
 PRODUCT_USE_DYNAMIC_PARTITIONS := true
 
 # VNDK
-PRODUCT_TARGET_VNDK_VERSION := 32
+PRODUCT_TARGET_VNDK_VERSION := 31
 
 # API
-PRODUCT_SHIPPING_API_LEVEL := 31
+PRODUCT_SHIPPING_API_LEVEL := 30
 
 # fastbootd
 PRODUCT_PACKAGES += \
