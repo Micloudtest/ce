@@ -75,7 +75,7 @@ BOARD_VENDORIMAGE_PARTITION_RESERVED_SIZE := 220270592
 # Target Super
 PARTITIONS := system vendor
 BOARD_PARTITION_LIST := $(call to-upper, $(PARTITIONS))
-$(foreach p, $(BOARD_PARTITION_LIST), $(eval BOARD_$(p)IMAGE_FILE_SYSTEM_TYPE := erofs))
+$(foreach p, $(BOARD_PARTITION_LIST), $(eval BOARD_$(p)IMAGE_FILE_SYSTEM_TYPE := ext4\))
 $(foreach p, $(BOARD_PARTITION_LIST), $(eval TARGET_COPY_OUT_$(p) := $(call to-lower, $(p))))
 
 TARGET_COPY_OUT_VENDOR := vendor
