@@ -95,6 +95,9 @@ TARGET_USES_UEFI := true
 # System as root
 BOARD_SUPPRESS_SECURE_ERASE := true
 
+# Metadata
+BOARD_USES_METADATA_PARTITION := true
+
 # Display
 TARGET_SCREEN_DENSITY := 440
 TW_BRIGHTNESS_PATH := "/sys/devices/platform/leds-mt65xx/leds/lcd-backlight/brightness"
@@ -128,18 +131,13 @@ TARGET_RECOVERY_FSTAB := $(DEVICE_PATH)/recovery/root/system/etc/recovery.fstab
 # Properties
 TARGET_SYSTEM_PROP += $(DEVICE_PATH)/system.prop
 
-ifneq ($(OF_HIDE_NOTCH),1)
-  # Configure Status bar icons for regular TWRP builds only
-    TW_DEVICE_VERSION := Lancelot-Tapin™
-    TW_STATUS_ICONS_ALIGN := center
-    TW_CUSTOM_CPU_POS := "300"
-    TW_CUSTOM_CLOCK_POS := "60"
-endif
-
 # Tool
 TW_INCLUDE_REPACKTOOLS := true
 TW_INCLUDE_RESETPROP := true
 TW_INCLUDE_LIBRESETPROP := true
+
+# VNDK Treble
+BOARD_VNDK_VERSION := current
 
 # TWRP Configuration
 TW_THEME := portrait_hdpi
@@ -163,6 +161,3 @@ TW_EXCLUDE_DEFAULT_USB_INIT := true
 # Log
 TWRP_INCLUDE_LOGCAT := true
 TARGET_USES_LOGD := true
-
-# Disable AVB2.0
-TW_DISABLE_DEFAULT_PATCH_AVB2 := true
