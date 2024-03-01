@@ -87,14 +87,8 @@ TARGET_USES_MKE2FS := true
 # UEFI
 TARGET_USES_UEFI := true
 
-# System as root
-BOARD_SUPPRESS_SECURE_ERASE := true
-
 # Metadata
 BOARD_USES_METADATA_PARTITION := true
-
-# Use LZ4 Ramdisk compression instead of GZIP
-BOARD_RAMDISK_USE_LZ4 := true
 
 # Display
 TARGET_SCREEN_DENSITY := 440
@@ -132,8 +126,8 @@ ifneq ($(OF_HIDE_NOTCH),1)
     TW_STATUS_ICONS_ALIGN := center
     TW_CUSTOM_CPU_POS := "300"
     TW_CUSTOM_CLOCK_POS := "60"
-    TW_Y_OFFSET := 80
-    TW_H_OFFSET := -80
+    3TW_Y_OFFSET := 80
+    3TW_H_OFFSET := -80
 endif
 
 # Recovery
