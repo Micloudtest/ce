@@ -8,6 +8,8 @@ DEVICE_PATH := device/xiaomi/lancelot
 
 # For building with minimal manifest
 ALLOW_MISSING_DEPENDENCIES := true
+SEPOLICY_IGNORE_NEVERALLOWS := true
+SELINUX_IGNORE_NEVERALLOWS := true
 
 # APEX
 DEXPREOPT_GENERATE_APEX_IMAGE := true
