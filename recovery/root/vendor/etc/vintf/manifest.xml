@@ -1,7 +1,5 @@
 <!--
     Input:
-        manifest.xml
-        manifest.xml
         manifest_wechat.xml
         manifest_target_level_r.xml
         manifest_sensor_hidl_v2.xml
