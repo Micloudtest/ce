@@ -169,3 +169,46 @@ TW_EXCLUDE_DEFAULT_USB_INIT := true
 # Log
 TWRP_INCLUDE_LOGCAT := true
 TARGET_USES_LOGD := true
+
+# SHRP flags
+# maintainer
+SHRP_MAINTAINER := "Tapin Recovery Instraller"
+
+# device
+SHRP_DEVICE_CODE := lancelot
+SHRP_PATH := device/xiaomi/lancelot
+SHRP_REC_TYPE := SAR
+SHRP_DEVICE_TYPE := V-A
+SHRP_AB := False
+
+# mount points
+SHRP_INTERNAL := /sdcard
+SHRP_EXTERNAL := /sdcard1
+SHRP_OTG := /usb_otg
+
+# theming
+SHRP_DARK := true
+
+# "SHRP Express"
+SHRP_EXPRESS := true
+SHRP_EXPRESS_USE_DATA := true
+
+# Removes the loop block errors after flashing ZIPs (Workaround) 
+SHRP_IGNORE_LOGICAL_MOUNT_ERRORS := true
+SHRP_LOOP_DEVICE_ERRORS_TO_LOG := true
+
+# status bar padding
+SHRP_STATUSBAR_RIGHT_PADDING := 64
+SHRP_STATUSBAR_LEFT_PADDING := 64
+
+# skip all addons
+SHRP_SKIP_DEFAULT_ADDON_1 := true
+SHRP_SKIP_DEFAULT_ADDON_2 := true
+SHRP_SKIP_DEFAULT_ADDON_3 := true
+SHRP_SKIP_DEFAULT_ADDON_4 := true
+SHRP_EXCLUDE_MAGISK_FLASH := true
+
+# flashlight
+SHRP_FLASH := 1
+SHRP_CUSTOM_FLASHLIGHT := false
+#SHRP_FONP_1 := /sys/devices/platform/flashlights_ocp8132/leds/
