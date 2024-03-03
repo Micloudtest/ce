@@ -184,7 +184,7 @@ SHRP_DEVICE_TYPE := A_Only
 
 # mount points
 SHRP_INTERNAL := /sdcard
-SHRP_EXTERNAL := /sdcard1
+SHRP_EXTERNAL := /external_sd
 SHRP_OTG := /usb_otg
 
 # theming
