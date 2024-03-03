@@ -12,8 +12,6 @@ ALLOW_MISSING_DEPENDENCIES := true
 # Build Hack
 BUILD_BROKEN_DUP_RULES := true
 BUILD_BROKEN_MISSING_REQUIRED_MODULES := true
-SEPOLICY_IGNORE_NEVERALLOWS := true
-SELINUX_IGNORE_NEVERALLOWS := true
 
 # Architecture
 TARGET_ARCH := arm64
@@ -109,15 +107,15 @@ BOARD_AVB_RECOVERY_ADD_HASH_FOOTER_ARGS += \
     --prop com.android.build.boot.os_version:$(PLATFORM_VERSION) \
     --prop com.android.build.boot.security_patch:$(PLATFORM_SECURITY_PATCH)
 
-# Crypto
+# Encryption
 TW_INCLUDE_CRYPTO := true
 TW_INCLUDE_CRYPTO_FBE := true
-TW_INCLUDE_FBE_METADATA_DECRYPT := true
-TW_PREPARE_DATA_MEDIA_EARLY := true
-
-# Encryption
 TARGET_CRYPTFS_HW_PATH := $(DEVICE_PATH)/cryptfs_hw
 TARGET_HW_DISK_ENCRYPTION := true
+
+# Crypto
+TW_INCLUDE_FBE_METADATA_DECRYPT := true
+TW_PREPARE_DATA_MEDIA_EARLY := true
 
 # Keymaster
 TARGET_PROVIDES_KEYMASTER := true
