@@ -177,9 +177,10 @@ SHRP_MAINTAINER := "Tapin Recovery Instraller"
 # device
 SHRP_DEVICE_CODE := lancelot
 SHRP_PATH := device/xiaomi/lancelot
-SHRP_REC_TYPE := SAR
-SHRP_DEVICE_TYPE := V-A
-SHRP_AB := False
+SHRP_REC_TYPE := Normal
+SHRP_REC := /dev/block/by-name/recovery
+SHRP_HAS_RECOVERY_PARTITION := true
+SHRP_DEVICE_TYPE := A_Only
 
 # mount points
 SHRP_INTERNAL := /sdcard
