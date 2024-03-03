@@ -85,9 +85,6 @@ TARGET_USERIMAGES_USE_F2FS := true
 # UEFI
 TARGET_USES_UEFI := true
 
-# System as root
-BOARD_SUPPRESS_SECURE_ERASE := true
-
 # Metadata
 BOARD_USES_METADATA_PARTITION := true
 
