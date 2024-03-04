@@ -134,8 +134,8 @@ ifneq ($(OF_HIDE_NOTCH),1)
     TW_STATUS_ICONS_ALIGN := center
     TW_CUSTOM_CPU_POS := "300"
     TW_CUSTOM_CLOCK_POS := "60"
-    TW_Y_OFFSET := 80
-    TW_H_OFFSET := -80
+    #TW_Y_OFFSET := 80
+    #TW_H_OFFSET := -80
 endif
 
 # Recovery
