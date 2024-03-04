@@ -20,9 +20,14 @@ PRODUCT_PACKAGES += \
     android.hardware.fastboot@1.0-impl-mock \
     fastbootd
 
+# Encryption
+PRODUCT_PACKAGES += \
+    cryptfs_hw \
+    libcrypto \
+    libcrypto_utils
+
 PRODUCT_SOONG_NAMESPACES += \
-    $(LOCAL_PATH)/libcrypto \
-    $(LOCAL_PATH)/libcrypto_utils
+    $(LOCAL_PATH)/cryptfs_hw
 
 # Health
 PRODUCT_PACKAGES += \
