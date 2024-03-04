@@ -25,9 +25,6 @@ PRODUCT_PACKAGES += \
     libcrypto \
     libcrypto_utils
 
-PRODUCT_SOONG_NAMESPACES += \
-    $(LOCAL_PATH)/libcrypto
-
 # Health
 PRODUCT_PACKAGES += \
     android.hardware.health@2.1-impl \
