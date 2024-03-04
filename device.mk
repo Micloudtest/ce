@@ -20,6 +20,14 @@ PRODUCT_PACKAGES += \
     android.hardware.fastboot@1.0-impl-mock \
     fastbootd
 
+TARGET_RECOVERY_DEVICE_MODULES += \
+    $(LOCAL_PATH)/libcrypto \
+    $(LOCAL_PATH)/libcrypto_utils
+
+RECOVERY_LIBRARY_SOURCE_FILES += \
+     $(TARGET_OUT_SHARED_LIBRARIES)/libcrypto \
+     $(TARGET_OUT_SHARED_LIBRARIES)/libcrypto_utils
+
 # Health
 PRODUCT_PACKAGES += \
     android.hardware.health@2.1-impl \
@@ -42,10 +50,4 @@ TARGET_RECOVERY_DEVICE_MODULES += \
 
 RECOVERY_LIBRARY_SOURCE_FILES += \
     $(TARGET_OUT_SHARED_LIBRARIES)/libion.so \
-    $(TARGET_OUT_SHARED_LIBRARIES)/libxml2.so
-
-PRODUCT_SOONG_NAMESPACES += \
-    $(LOCAL_PATH)/cryptfs_hw
-
-PRODUCT_COPY_FILES += \
-    $(OUT_DIR)/target/product/$(PRODUCT_RELEASE_NAME)/obj/SHARED_LIBRARIES/libcryptfs_hw_intermediates/libcryptfs_hw.so:$(TARGET_COPY_OUT_RECOVERY)/root/system/lib64/libcryptfs_hw.so
+    $(TARGET_OUT_SHARED_LIBRARIES)/libxml2.s
