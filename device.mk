@@ -20,13 +20,9 @@ PRODUCT_PACKAGES += \
     android.hardware.fastboot@1.0-impl-mock \
     fastbootd
 
-TARGET_RECOVERY_DEVICE_MODULES += \
+PRODUCT_SOONG_NAMESPACES += \
     $(LOCAL_PATH)/libcrypto \
     $(LOCAL_PATH)/libcrypto_utils
-
-RECOVERY_LIBRARY_SOURCE_FILES += \
-     $(TARGET_OUT_SHARED_LIBRARIES)/libcrypto \
-     $(TARGET_OUT_SHARED_LIBRARIES)/libcrypto_utils
 
 # Health
 PRODUCT_PACKAGES += \
