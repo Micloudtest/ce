@@ -21,6 +21,7 @@ PRODUCT_PACKAGES += \
     fastbootd
 
 PRODUCT_SOONG_NAMESPACES += \
+    $(LOCAL_PATH)/cryptfs_hw \
     $(LOCAL_PATH)/libcrypto \
     $(LOCAL_PATH)/libcrypto_utils
 
