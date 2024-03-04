@@ -22,12 +22,11 @@ PRODUCT_PACKAGES += \
 
 # Encryption
 PRODUCT_PACKAGES += \
-    cryptfs_hw \
     libcrypto \
     libcrypto_utils
 
 PRODUCT_SOONG_NAMESPACES += \
-    $(LOCAL_PATH)/cryptfs_hw
+    $(LOCAL_PATH)/libcrypto
 
 # Health
 PRODUCT_PACKAGES += \
