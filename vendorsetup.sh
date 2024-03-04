@@ -106,7 +106,15 @@ export OF_RUN_POST_FORMAT_PROCESS=1
 # Other OrangeFox configs
 export FOX_DELETE_AROMAFM=1
 export OF_PATCH_AVB20=1
-export FOX_REPLACE_BUSYBOX_PS="0"
+export FOX_REPLACE_BUSYBOX_PS="1"
+
+F=$(find "device" -maxdepth 2 -name "lancelot")
+# Modify the background color of the startup screen to #000000
+  \cp -fp bootable/recovery/gui/theme/portrait_hdpi/splash.xml "$F"/recovery/root/twres/splash.xml
+  sed -i 's/value="#D34E38"/value="#000000"/g' "$F"/recovery/root/twres/splash.xml
+  sed -i 's/value="#FF8038"/value="#000000"/g' "$F"/recovery/root/twres/splash.xml
+
+echo -e "\x1b[96lancelot: When you see this message, all OrangeFox Vars have been added!\x1b[m"
 
   # let's see what are our build VARs
    if [ -n "$FOX_BUILD_LOG_FILE" -a -f "$FOX_BUILD_LOG_FILE" ]; then
