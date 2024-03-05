@@ -10,7 +10,7 @@
 /product          ext4      /dev/block/mapper/product                      flags=display="Product";backup=1;flashimg=1;logical
 
 ## User-writable / Storage partitions
-/data               f2fs     /dev/block/platform/bootdevice/by-name/userdata                        flags=encryptable=footer;fileencryption=aes-256-xts
+/data               ext4     /dev/block/platform/bootdevice/by-name/userdata                        flags=encryptable=footer;fileencryption=aes-256-xts
 /metadata           ext4     /dev/block/platform/bootdevice/by-name/metadata                        flags=backup=0;wrappedkey;display="Metadata"
 
 /cache              ext4      /dev/block/platform/bootdevice/by-name/rescue                         flags=display="Cache";
