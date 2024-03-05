@@ -3,7 +3,7 @@ import /init.microtrust.rc
 on init
     export LD_LIBRARY_PATH /system/lib64:/vendor/lib64:/vendor/lib64/hw:/system/lib64/hw
 
-on fs
+on property:ro.crypto.state=encrypted && property:ro.crypto.type=file
     install_keyring
 
 service keystore_auth /system/bin/keystore_auth
