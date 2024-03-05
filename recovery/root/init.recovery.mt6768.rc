@@ -5,7 +5,6 @@ on init
 
 on fs
     install_keyring
-    setprop crypto.ready 1
 
 service keystore_auth /system/bin/keystore_auth
     oneshot
