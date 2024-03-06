@@ -44,6 +44,7 @@ if [ -f "$(gettop)/bootable/recovery/orangefox.cpp" ]; then
 # Version / Maintainer infos
 export OF_MAINTAINER="Tapin Recovery Instraller"
 export FOX_VERSION=R12.1_0
+export FOX_VARIANT=S-Vendor
 export FOX_BUILD_TYPE="Unofficial"
 export TARGET_DEVICE_ALT="lancelot"
 export FOX_TARGET_DEVICES="lancelot,shiva"
