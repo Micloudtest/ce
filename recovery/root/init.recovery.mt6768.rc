@@ -45,4 +45,4 @@ on property:twrp.decrypt.done=true && property:twrp.all.users.decrypted=true
 
 on boot
     start health-hal-2-1
-    start boot-hal-1-2
+    start vendor.boot-hal-1-2
