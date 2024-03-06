@@ -13,9 +13,6 @@ ALLOW_MISSING_DEPENDENCIES := true
 BUILD_BROKEN_DUP_RULES := true
 BUILD_BROKEN_MISSING_REQUIRED_MODULES := true
 
-# Build
-BUILD_BROKEN_ELF_PREBUILT_PRODUCT_COPY_FILES := true
-
 # Architecture
 TARGET_ARCH := arm64
 TARGET_ARCH_VARIANT := armv8-a
@@ -59,8 +56,6 @@ BOARD_MKBOOTIMG_ARGS += --dtb_offset $(BOARD_DTB_OFFSET)
 BOARD_KERNEL_IMAGE_NAME := Image.gz
 BOARD_INCLUDE_DTB_IN_BOOTIMG := true
 
-IGNORE_UPDATE_LOGICAL_MOUNT_ERROR := true
-
 # Clang
 TARGET_KERNEL_CLANG_COMPILE := true
 
@@ -78,13 +73,6 @@ BOARD_HAS_LARGE_FILESYSTEM := true
 BOARD_SYSTEMIMAGE_PARTITION_TYPE := ext4
 BOARD_VENDORIMAGE_FILE_SYSTEM_TYPE := ext4
 BOARD_PRODUCTIMAGE_FILE_SYSTEM_TYPE := ext4
-
-# Dynamic Partition handling flags
-IGNORE_UPDATE_LOGICAL_PARTITION_ERROR := true # Makes twrp ignore "unable to update logical partition" error
-ALLOW_LOGICAL_PARTITION_WIPE := true # lets the dynamic partitions be wipable/resizable in twrp > wipe
-
-# these dynamic partitions will get mounted as rw
-BOARD_RW_DYNAMIC_PARTITIONS_LIST := system system_ext vendor product 
 
 # Workaround for copying error vendor files to recovery ramdisk
 TARGET_COPY_OUT_VENDOR := vendor
