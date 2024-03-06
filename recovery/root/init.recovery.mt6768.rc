@@ -6,6 +6,17 @@ on init
 on fs
     setprop crypto.ready 1
 
+# We need vold early for metadata encryption
+on early-fs
+    start vold
+
+on late-fs
+    # Wait for keymaster
+    exec_start wait_for_keymaster
+
+    # Mount RW partitions which need run fsck
+    mount_all /vendor/etc/fstab.${ro.boot.hardware.platform} --late
+
 on property:ro.crypto.state=encrypted && property:ro.crypto.type=file
     install_keyring
 
