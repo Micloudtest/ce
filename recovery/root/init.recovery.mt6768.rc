@@ -3,6 +3,9 @@ import /init.microtrust.rc
 on init
     export LD_LIBRARY_PATH /system/lib64:/vendor/lib64:/vendor/lib64/hw:/system/lib64/hw
 
+on fs
+    setprop crypto.ready 1
+
 on property:ro.crypto.state=encrypted && property:ro.crypto.type=file
     install_keyring
 
