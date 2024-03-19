@@ -1,51 +1,57 @@
 #
-# Copyright (C) 2020 The Android Open Source Project
-# Copyright (C) 2020 The TWRP Open Source Project
-# Copyright (C) 2020 SebaUbuntu's TWRP device tree generator
+# Copyright (C) 2023 The OrangeFox Recovery Project
+#
+# SPDX-License-Identifier: Apache-2.0
 #
 
-LOCAL_PATH := device/xiaomi/lancelot
+# Enable updating of APEXes
+$(call inherit-product, $(SRC_TARGET_DIR)/product/updatable_apex.mk)
+
+# Installs developer gsi keys into ramdisk, to boot a developer GSI with verified boot.
+$(call inherit-product, $(SRC_TARGET_DIR)/product/developer_gsi_keys.mk)
+
+# API
+PRODUCT_SHIPPING_API_LEVEL := 29
 
 # Dynamic Partitions
 PRODUCT_USE_DYNAMIC_PARTITIONS := true
 
-# VNDK
-PRODUCT_TARGET_VNDK_VERSION := 31
+# Crypto
+PRODUCT_VENDOR_PROPERTIES += \
+    ro.crypto.volume.filenames_mode=aes-256-cts
 
-# API
-PRODUCT_SHIPPING_API_LEVEL := 30
-
-# fastbootd
+# Fastbootd
 PRODUCT_PACKAGES += \
-    android.hardware.fastboot@1.0-impl-mock \
+    android.hardware.fastboot@1.1-impl-mock \
     fastbootd
 
-# Health
+# Gatekeeper
 PRODUCT_PACKAGES += \
-    android.hardware.health@2.1-impl \
-    android.hardware.health@2.1-service
+    android.hardware.gatekeeper@1.0-service-recovery \
+    android.hardware.gatekeeper@1.0-impl-recovery
 
-# Additional Libraries
+PRODUCT_VENDOR_PROPERTIES += \
+    ro.hardware.gatekeeper=beanpod
+
+# Keymaster
 TARGET_RECOVERY_DEVICE_MODULES += \
     libkeymaster4 \
-    libkeymaster41 \
     libpuresoftkeymasterdevice
 
 RECOVERY_LIBRARY_SOURCE_FILES += \
     $(TARGET_OUT_SHARED_LIBRARIES)/libkeymaster4.so \
-    $(TARGET_OUT_SHARED_LIBRARIES)/libkeymaster41.so \
     $(TARGET_OUT_SHARED_LIBRARIES)/libpuresoftkeymasterdevice.so
 
-TARGET_RECOVERY_DEVICE_MODULES += \
-    libion \
-    libxml2 
+PRODUCT_VENDOR_PROPERTIES += \
+    ro.hardware.kmsetkey=beanpod
 
-RECOVERY_LIBRARY_SOURCE_FILES += \
-    $(TARGET_OUT_SHARED_LIBRARIES)/libion.so \
-    $(TARGET_OUT_SHARED_LIBRARIES)/libxml2.so
+# TEE
+PRODUCT_VENDOR_PROPERTIES += \
+    ro.vendor.mtk_microtrust_tee_support=1
 
-PRODUCT_SOONG_NAMESPACES += \
-    $(LOCAL_PATH)/cryptfs_hw
+# USB
+PRODUCT_SYSTEM_PROPERTIES += \
+    ro.sys.usb.storage.type=mtp
 
-PRODUCT_COPY_FILES += \
-    $(OUT_DIR)/target/product/$(PRODUCT_RELEASE_NAME)/obj/SHARED_LIBRARIES/libcryptfs_hw_intermediates/libcryptfs_hw.so:$(TARGET_COPY_OUT_RECOVERY)/root/system/lib64/libcryptfs_hw.so
+# VNDK
+PRODUCT_TARGET_VNDK_VERSION := 30
