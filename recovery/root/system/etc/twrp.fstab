@@ -33,9 +33,6 @@
 /logo               emmc      /dev/block/platform/bootdevice/by-name/logo                   flags=display="Logo";
 /seccfg             emmc      /dev/block/platform/bootdevice/by-name/seccfg                 flags=display="Seccfg"
 
-# Internal storage 
-/storage    f2fs		/data/media/0							flags=display="Internal Storage";backup=1;usermrf;fsflags="bind";removable
-
 ## External Storage
 /external_sd        auto     /dev/block/mmcblk1p1  /dev/block/mmcblk1           flags=display="Micro SD";storage;wipeingui;removable;fsflags="utf8"
 /usb_otg            auto     /dev/block/sda1  /dev/block/sda                    flags=display="USB OTG";storage;wipeingui;removable;fsflags="utf8"
