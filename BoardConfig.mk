@@ -9,9 +9,9 @@ DEVICE_PATH := device/xiaomi/lancelot
 # For building with minimal manifest
 ALLOW_MISSING_DEPENDENCIES := true
 
-# Build Hack
-BUILD_BROKEN_DUP_RULES := true
-BUILD_BROKEN_MISSING_REQUIRED_MODULES := true
+# APEX
+DEXPREOPT_GENERATE_APEX_IMAGE := true
+
 
 # Architecture
 TARGET_ARCH := arm64
@@ -94,12 +94,18 @@ BOARD_PRODUCTIMAGE_FILE_SYSTEM_TYPE := ext4
 TARGET_COPY_OUT_VENDOR := vendor
 TARGET_COPY_OUT_PRODUCT := product
 
-# Platform
-TARGET_BOARD_PLATFORM := mt6768
-
 # Userdata Propertirs
 TARGET_USERIMAGES_USE_EXT4 := true
 TARGET_USERIMAGES_USE_F2FS := true
+
+# Platform
+TARGET_BOARD_PLATFORM := mt6768
+
+# UEFI
+TARGET_USES_UEFI := true
+
+# System as Root
+BOARD_SUPPRESS_SECURE_ERASE := true
 
 # Platform
 TARGET_BOARD_PLATFORM := mt6768
@@ -139,6 +145,9 @@ TW_MAX_BRIGHTNESS := 2047
 TW_INCLUDE_NTFS_3G := true
 TARGET_USES_MKE2FS := true
 TW_INCLUDE_PYTHON := true
+
+# VNDK Treble
+BOARD_VNDK_VERSION := current
 
 # Removes the loop block errors after flashing ZIPs (Workaround) 
 TW_IGNORE_LOGICAL_MOUNT_ERRORS=1
