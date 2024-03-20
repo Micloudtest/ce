@@ -10,10 +10,6 @@ PRODUCT_SHIPPING_API_LEVEL := 29
 # Dynamic Partitions
 PRODUCT_USE_DYNAMIC_PARTITIONS := true
 
-# Crypto
-PRODUCT_VENDOR_PROPERTIES += \
-    ro.crypto.volume.filenames_mode=aes-256-cts
-
 # Fastbootd
 PRODUCT_PACKAGES += \
     android.hardware.fastboot@1.1-impl-mock \
@@ -24,28 +20,24 @@ PRODUCT_PACKAGES += \
     android.hardware.gatekeeper@1.0-service-recovery \
     android.hardware.gatekeeper@1.0-impl-recovery
 
-PRODUCT_VENDOR_PROPERTIES += \
-    ro.hardware.gatekeeper=beanpod
-
-# Keymaster
+# Additional Libraries
 TARGET_RECOVERY_DEVICE_MODULES += \
     libkeymaster4 \
+    libkeymaster41 \
     libpuresoftkeymasterdevice
 
 RECOVERY_LIBRARY_SOURCE_FILES += \
     $(TARGET_OUT_SHARED_LIBRARIES)/libkeymaster4.so \
+    $(TARGET_OUT_SHARED_LIBRARIES)/libkeymaster41.so \
     $(TARGET_OUT_SHARED_LIBRARIES)/libpuresoftkeymasterdevice.so
 
-PRODUCT_VENDOR_PROPERTIES += \
-    ro.hardware.kmsetkey=beanpod
+TARGET_RECOVERY_DEVICE_MODULES += \
+    libion \
+    libxml2 
 
-# TEE
-PRODUCT_VENDOR_PROPERTIES += \
-    ro.vendor.mtk_microtrust_tee_support=1
-
-# USB
-PRODUCT_SYSTEM_PROPERTIES += \
-    ro.sys.usb.storage.type=mtp
+RECOVERY_LIBRARY_SOURCE_FILES += \
+    $(TARGET_OUT_SHARED_LIBRARIES)/libion.so \
+    $(TARGET_OUT_SHARED_LIBRARIES)/libxml2.
 
 # VNDK
 PRODUCT_TARGET_VNDK_VERSION := 30
