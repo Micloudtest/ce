@@ -55,7 +55,6 @@ if [ -f "$(gettop)/bootable/recovery/orangefox.cpp" ]; then
 	 	export OF_USE_MAGISKBOOT_FOR_ALL_PATCHES=1
   
 		# OTA / DM-Verity / Encryption
-  		export OF_KEEP_DM_VERITY=1
 	  	export OF_SUPPORT_ALL_BLOCK_OTA_UPDATES=1
  		export OF_NO_TREBLE_COMPATIBILITY_CHECK=1
 		export OF_DISABLE_MIUI_OTA_BY_DEFAULT=1
